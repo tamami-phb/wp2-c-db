@@ -8,7 +8,7 @@
 </form>
 
 <?php
-if(isset($_POST['nim']) and !empty($_POST['nimm'])) {
+if(isset($_POST['nim']) and !empty($_POST['nim'])) {
     include('koneksi.php');
     $sql = "insert into mahasiswa(nim, nama, kelas) values('" .
       $_POST['nim'] . "','" . $_POST['nama'] . "','" . $_POST['kelas'] . "'";
@@ -17,7 +17,7 @@ if(isset($_POST['nim']) and !empty($_POST['nimm'])) {
         echo '<script type="text/javascript">';
         echo 'alert("Data telah tersimpan");';
         echo 'window.location.href = "index.php";';
-        echo '</script>'
+        echo '</script>';
     }
 }
 ?>
