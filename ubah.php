@@ -25,7 +25,7 @@ echo '<input type="text" name="kelas" value="' . $data->kelas . '"><br>';
 </form>
 
 <?php
-if(isset($_POST['nim']) && !empty($_POST['nim']) {
+if(isset($_POST['nim']) && !empty($_POST['nim'])) {
     $sql = "update mahasiswa set nama='" . $_POST['nama'] . "', " .
         "kelas='" . $_POST['kelas'] . "' " .
         "where nim='" . $_POST['nim'] . "'";
