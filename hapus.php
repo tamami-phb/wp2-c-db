@@ -2,9 +2,11 @@
 //echo $_GET["nim"];
 require_once('koneksi.php');
 
+
 $sql = "delete from mahasiswa where nim='" . $_GET['nim'] . "'";
 $result = pg_query($sql);
 $jumlah = pg_num_rows($result);
+echo $jumlah;
 
 if($jumlah > 0) {
     echo '<script type="text/javascript">';
