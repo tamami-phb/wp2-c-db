@@ -11,9 +11,15 @@ $data = pg_fetch_object($result);
 <form method="POST">
     NIM : 
 <?php
-echo '<input type="text" name="nim" required value="' . $data->nim . '"><br>';
+echo '<input type="text" name="nim" readonly value="' . $data->nim . '"><br>';
 ?>
-    NAMA : <input type="text" name="nama"><br>
-    KELAS : <input type="text" name="kelas"><br>
+    NAMA : 
+<?php
+echo '<input type="text" name="nama" value="' . $data->nama . '"><br>';
+?>
+    KELAS : 
+<?php
+echo '<input type="text" name="kelas" value="' . $data->kelas . '"><br>';
+?>
     <input type="submit" value="Simpan">
 </form>
