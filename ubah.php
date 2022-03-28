@@ -4,6 +4,7 @@ require_once 'koneksi.php';
 $sql = "select * from mahasiswa where nim='" . $_GET['nim'] . "'";
 $result = pg_query($sql);
 $data = pg_fetch_object($result);
+echo $data;
 ?>
 
 <h1>Form Ubah Data</h1>
